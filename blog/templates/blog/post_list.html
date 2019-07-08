@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>OlexD</title>
-</head>
-<body>
-<div>
-    <h1><a href="/">OlexD Django Blog**</a></h1>
-</div>
-
-
-{% for post in posts %}
-    <div>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-        <p>published: {{ post.published_date }}</p>
-    </div>
-{% endfor %}
-</body>
-</html>
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

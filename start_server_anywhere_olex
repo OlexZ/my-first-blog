@@ -11,3 +11,8 @@ python manage.py createsuperuser
 cd ~/my-first-blog
 git pull
 
+// коли помилка  "GET /static/css/blog.css HTTP/1.1" 404 1660
+
+python manage.py collectstatic
+
+
