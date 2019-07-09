@@ -16,3 +16,4 @@ git pull
 python manage.py collectstatic
 
 
+workon <your-pythonanywhere-domain>.pythonanywhere.com
